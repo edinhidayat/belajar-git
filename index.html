@@ -36,28 +36,15 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            // menyembunyikan id #keatas
-            // $("#keatas").hide();
-
-            // memberikan efek fade in pada id #keatas
-            $(function () {
-                // $(window).scroll(function () {
-                //     if ($(this).scrollTop() > 100) {
-                //         $('#keatas').fadeIn();
-                //     } else {
-                //         $('#keatas').fadeOut();
-                //     }
-                // });
-
-                // scroll halaman ke 866px (ke body) ketika diklik
-                $('.menu').click(function () {
-                    $('body,html').animate({
-                        scrollTop: 866
-                    }, 800);
-                    return false;
-                });
+            function scroll(nilai) {
+                $('body, html').animate({
+                    scrollTop: nilai
+                }, 800);
+                return false;
+            }
+            $('.menu').click(function () {
+                scroll(866);
             });
-
         });
     </script>
 </body>
